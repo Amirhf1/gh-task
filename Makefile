@@ -41,3 +41,6 @@ up:
 
 down:
 	@docker-compose down
+
+phpcs:
+	@./vendor/bin/pint
