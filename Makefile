@@ -44,3 +44,9 @@ down:
 
 phpcs:
 	@./vendor/bin/pint
+
+coverage:
+	./vendor/bin/phpunit --coverage-html coverage
+
+test:
+	./vendor/bin/phpunit
