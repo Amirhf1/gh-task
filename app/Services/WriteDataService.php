@@ -11,7 +11,7 @@ class WriteDataService
 {
     public function write(): void
     {
-        $template = file_get_contents(base_path('tools/template/test.txt'));
+        $template = file_get_contents(base_path('tools/template/domestic_flights_template.txt'));
         $spreadsheet = IOFactory::load(public_path('template/xlsx/new.xlsx'));
         $worksheet = $spreadsheet->getActiveSheet();
 
