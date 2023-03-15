@@ -40,6 +40,4 @@ class WriteDataServiceTest extends TestCase
 
         $this->assertFileExists(public_path('template/xlsx/new.xlsx'));
     }
-
 }
-
