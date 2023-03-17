@@ -7,14 +7,27 @@
 cp .env.example .env
 ```
 ```bash
-composer i 
-```
-```bash
-docker-compose build 
+make install
 ```
 ```bash
 make up 
 ```
+
+Finally, we want to be able to create SSL certificates for our application,
+so run the following command inside `docker/nginx/ssl`:
+```php
+mkcert "*.landing-app.localhost" "landing-app.localhost"
+```
+And rename the following files like this:
+
+`app-cert.pem`
+
+`app-key.pem`
+
+**Excellent, now you can open the following address in your browser**
+https://landing-app.localhost/
+
+
 
 ## Running Tests
 
