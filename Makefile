@@ -30,9 +30,6 @@ php:
 mysql:
 	@docker exec -it $(PROJECT_NAME)_mysql /bin/sh
 
-redis:
-	@docker exec -it $(PROJECT_NAME)_redis /bin/sh
-
 container:
 	@docker container ps
 
@@ -41,6 +38,9 @@ up:
 
 down:
 	@docker-compose down
+
+reload:
+	@docker-compose down && docker-compose up -d
 
 phpcs:
 	@./vendor/bin/pint
