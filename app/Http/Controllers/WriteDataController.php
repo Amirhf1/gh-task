@@ -15,6 +15,6 @@ class WriteDataController extends Controller
 
     public function index()
     {
-        $this->writeDataService->write();
+        return $this->writeDataService->write();
     }
 }
